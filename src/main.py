@@ -1,6 +1,6 @@
-from PlaceKeywordExtractor import PlaceKeywordExtractor
-from OSMQueryFactory import OSMQueryFactory
-from utils import getFilePath, preprocessBotConvo
+from modules.OSMQueryFactory import OSMQueryFactory
+from modules.PlaceKeywordExtractor import PlaceKeywordExtractor
+from modules.utils import getFilePath, preprocessBotConvo
 
 if __name__ == '__main__':
     factory = OSMQueryFactory()
