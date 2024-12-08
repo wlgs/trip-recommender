@@ -1,0 +1,11 @@
+Bot: Jak zazwyczaj planujesz swoje podróże?  
+Użytkownik: Szukam ciekawych miejsc do zabawy - klubów, barów, ciekawych restauracji. Interesują mnie też kina i inne miejsca rozrywki.  
+
+Bot: Jakie są twoje priorytety w trakcie wyjazdów?  
+Użytkownik: Odpoczynek i dobra zabawa. Uwielbiam poznawać lokalne jedzenie i uczestniczyć w życiu nocnym.  
+
+Bot: Czy interesują Cię inne typy atrakcji, jak np. muzea?  
+Użytkownik: Raczej nie. Jeśli już, to tylko bardzo nietypowe wystawy lub coś związanego z lokalną kuchnią.  
+
+Bot: Co jest dla Ciebie najważniejsze podczas wizyty w restauracji?  
+Użytkownik: Atmosfera i jakość jedzenia. Uwielbiam miejsca z unikalnym klimatem.  

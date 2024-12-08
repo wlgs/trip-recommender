@@ -1,0 +1,13 @@
+Potrzebuje byś wygenerował próbkę 3 rodzajów dokumentów tekstowych które będą służyły opisaniu i wyekstrahowaniu preferencji użytkownika miejsc kluczowych podczas planowania jego wycieczki.
+1. Pierwszy dokument - soc.txt - posiada dane z portali społecznościowych (np. takie jak polubione strony, napisane wpisy)
+2. Drugi dokument - doc.txt - wywiad (konwersacja) z botem - bot zadaje pytania, użytkownik udziela odpowiedzi (typu powiedz mi cos o sobie, o swoich preferencjach)
+3. Trzeci dokument - que.txt - to quizy i kwerendy wypełnione przez turystę aby poznać jego preferencje turystyczne
+
+Należy wygenerować dane dla każdego z trzech niżej opisanych profilii (dla każdego profilu po 3 dokumenty opisane wyżej):
+
+- profil kulturalny – zwiedzanie muzeów, galerii, obiektów sakralnych, 
+monumentów, wystawy, zamki, pałace. 
+- profil sportowy – aktywność fizyczna, fitness, rowery, bieganie stadiony, baseny, zdecydowanie mniej obiektów kulturalnych. 
+- profil rozrywkowy: restauracje, kluby i kina, życie nocne, hazard.
+
+Celem projektu będzie analiza sentymentu i preferencji oraz wyciągnięcie Punktów Zainteresowań (POI) na podstawie dokumentów (każdego z osobna, bądź razem). Ale narazie skup się na wygenerowaniu próbki danych.

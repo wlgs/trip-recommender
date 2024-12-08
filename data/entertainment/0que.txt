@@ -1,0 +1,10 @@
+1. Jak często odwiedzasz restauracje w nowych miejscach?  
+   - Zawsze (x)  
+2. Czy interesują Cię bary i kluby nocne w odwiedzanych miastach?  
+   - Zdecydowanie tak (x)  
+3. Czy kino to atrakcyjna forma spędzania czasu podczas wyjazdów?  
+   - Tak (x)  
+4. Czy obiekty historyczne i muzea są dla Ciebie interesujące?  
+   - Raczej nie (-)  
+5. Czy odwiedzasz kasyna w trakcie wyjazdów?  
+   - Czasami (x)  

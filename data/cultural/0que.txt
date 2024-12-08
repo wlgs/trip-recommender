@@ -1,0 +1,10 @@
+1. Czy preferujesz aktywności na świeżym powietrzu czy w pomieszczeniach?  
+   - W pomieszczeniach (x)  
+2. Jak ważna jest dla Ciebie historia odwiedzanego miejsca?  
+   - Bardzo ważna (x)  
+3. Czy zwiedzanie zamków i pałaców jest atrakcyjne dla Ciebie?  
+   - Zdecydowanie tak (x)  
+4. Jak często odwiedzasz muzea podczas podróży?  
+   - Zawsze (x)  
+5. Czy interesują Cię galerie sztuki nowoczesnej?  
+   - Tak (x)  

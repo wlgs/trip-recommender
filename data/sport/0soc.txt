@@ -1,0 +1,26 @@
+1. Polubione strony:
+   - "Biegacze na Świecie"
+   - "Fitness na świeżym powietrzu"
+   - "Triathloniści"
+   - "Górskie szlaki rowerowe"
+   - "Bieganie w mieście"
+   - "Wspinaczka górska - porady i trasy"
+   - "Pływanie w naturze"
+   - "Rowery i wycieczki rowerowe po Europie"
+
+2. Ostatnie wpisy:
+   - "Wczorajszy trening na rowerze - 50 km w świetnym tempie. Góry są niesamowite!"
+   - "Dziś przejechałem 25 km wzdłuż wybrzeża. Widoki zapierające dech w piersiach!"
+   - "Pływanie na świeżym powietrzu w jeziorze w Szwajcarii. Idealne miejsce do treningów!"
+   - "Maraton w Barcelonie - ukończony! 3 godziny 45 minut. Kolejny cel na horyzoncie!"
+   - "Triathlon - etap pływacki to dla mnie najtrudniejszy. Czas na intensywniejszy trening!"
+   - "Zrobiłem dzisiaj swój rekord na 5 km – 20:15! To mój osobisty sukces!"
+   - "Dla każdego, kto chce poprawić swoją technikę biegania: sprawdźcie najnowszy poradnik o formie biegacza!"
+   - "Testuję nowy rower MTB - idealny do górskich tras w Dolomitach!"
+
+3. Ulubione wydarzenia:
+   - "Maraton Górski"
+   - "Triathlon 2024"
+   - "Zawody biegowe w Tatrach"
+   - "Zawody Ironman 2025"
+   - "Mistrzostwa Świata w Triathlonie"
