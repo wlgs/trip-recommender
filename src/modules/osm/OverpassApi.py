@@ -34,17 +34,44 @@ class OverpassAPI:
 
     def _process_response(self, data):
         pois = []
+
         for element in data.get('elements', []):
-            if 'lat' in element and 'lon' in element:
-                poi = {
-                    "type": element.get("type"),
-                    "id": element.get("id"),
-                    "lat": element.get("lat"),
-                    "lon": element.get("lon"),
-                    "tags": element.get("tags", {})
-                }
-                pois.append(poi)
+            tags = element.get("tags", {})
+            if not tags.get("name"):
+                continue
+
+            if element.get("type") == "node":
+                poi = self._process_node(element, tags)
+                if poi:
+                    pois.append(poi)
+            elif element.get("type") == "way":
+                poi = self._process_way(element, tags)
+                if poi:
+                    pois.append(poi)
+
         return pois
+
+    def _process_node(self, element, tags):
+        if 'lat' in element and 'lon' in element:
+            return {
+                "type": element.get("type"),
+                "id": element.get("id"),
+                "lat": element.get("lat"),
+                "lon": element.get("lon"),
+                "tags": tags
+            }
+        return None
+
+    def _process_way(self, element, tags):
+        if 'center' in element and 'lat' in element['center'] and 'lon' in element['center']:
+            return {
+                "type": element.get("type"),
+                "id": element.get("id"),
+                "lat": element["center"]["lat"],
+                "lon": element["center"]["lon"],
+                "tags": tags
+            }
+        return None
 
 # Example Usage
 if __name__ == "__main__":
@@ -61,7 +88,7 @@ if __name__ == "__main__":
             area({area_id})->.searchArea;
             node[amenity="library"](area.searchArea);
         );
-        out body;
+        out center body;
         >;
         out skel qt;
         """

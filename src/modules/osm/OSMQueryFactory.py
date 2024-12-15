@@ -1,4 +1,4 @@
-from modules.OverpassApi import OverpassAPI
+from modules.osm.OverpassApi import OverpassAPI
 
 class OSMQueryFactory:
     def __init__(self):
@@ -89,7 +89,7 @@ class OSMQueryFactory:
             area({area_id})->.searchArea;
             {query_body}
         );
-        out body;
+        out center body;
         >;
         out skel qt;
         """
