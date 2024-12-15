@@ -11,7 +11,7 @@ class OSMViewer:
         if self.pois:
             initial_location = [self.pois[0]['lat'], self.pois[0]['lon']]
         else:
-            initial_location = [50.061, 19.938]
+            initial_location = [0, 0]
 
         self.map = folium.Map(location=initial_location, zoom_start=13)
 
