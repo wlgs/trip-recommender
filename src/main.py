@@ -1,4 +1,5 @@
 from modules.OSMQueryFactory import OSMQueryFactory
+from modules.OverpassApi import OverpassAPI
 from modules.PlaceKeywordExtractor import PlaceKeywordExtractor
 from modules.utils import getFilePath, preprocessBotConvo
 
@@ -16,3 +17,6 @@ if __name__ == '__main__':
         print(keywords_similarity)
         query = factory.generate_query(keywords, "Kraków")
         print(query)
+        api = OverpassAPI()
+        pois = api.fetch_pois(query)
+        print(f"Found {len(pois)} POIs")

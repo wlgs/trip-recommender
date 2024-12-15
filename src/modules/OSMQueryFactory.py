@@ -1,3 +1,5 @@
+from modules.OverpassApi import OverpassAPI
+
 class OSMQueryFactory:
     def __init__(self):
         # Mapa kategorii OSM do odpowiednich słów kluczowych
@@ -77,10 +79,14 @@ class OSMQueryFactory:
             raise ValueError("No valid keywords provided.")
 
         query_body = "\n".join(query_parts)
+
+        overpass_api = OverpassAPI()
+        area_id = overpass_api.get_city_area_id(city)
+
         overpass_query = f"""
         [out:json][timeout:25];
         (
-                  {{{{geocodeArea:Kraków}}}}->.searchArea;
+            area({area_id})->.searchArea;
             {query_body}
         );
         out body;
