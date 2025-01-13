@@ -1,6 +1,13 @@
 from modules.osm.OverpassApi import OverpassAPI
 import folium
 
+COLORS = {
+    0: 'blue',
+    1: 'red',
+    2: 'green',
+    3: 'yellow'
+}
+
 class OSMViewer:
     def __init__(self, pois, city_name):
         self.pois = pois
@@ -9,22 +16,23 @@ class OSMViewer:
 
     def create_map(self):
         if self.pois:
-            initial_location = [self.pois[0]['lat'], self.pois[0]['lon']]
+            initial_location = [self.pois[0][0]['lat'], self.pois[0][0]['lon']]
         else:
             initial_location = [0, 0]
 
         self.map = folium.Map(location=initial_location, zoom_start=13)
 
-        for poi in self.pois:
-            name = poi['tags'].get('name', 'Unnamed')
-            lat = poi['lat']
-            lon = poi['lon']
-            folium.Marker(
-                location=[lat, lon],
-                popup=f"{name} ({lat}, {lon})",
-                tooltip=name,
-                icon=folium.Icon(color='blue')
-            ).add_to(self.map)
+        for day_num, day in enumerate(self.pois):
+            for poi in day:
+                name = poi['tags'].get('name', 'Unnamed')
+                lat = poi['lat']
+                lon = poi['lon']
+                folium.Marker(
+                    location=[lat, lon],
+                    popup=f"{name} ({lat}, {lon})",
+                    tooltip=name,
+                    icon=folium.Icon(color=COLORS.get(day_num, 'gray'))
+                ).add_to(self.map)
 
     def save_map(self, filename="map.html"):
         if self.map:

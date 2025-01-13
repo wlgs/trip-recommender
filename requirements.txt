@@ -50,3 +50,4 @@ urllib3==2.2.3
 wasabi==0.9.1
 weasel==0.3.4
 wheel==0.44.0
+scikit-learn==1.26.4

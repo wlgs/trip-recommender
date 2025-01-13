@@ -89,6 +89,6 @@ class PlaceKeywordExtractor:
         print(keyword_similarities)
 
         # Pobieranie maksymalnie `max_keywords` najlepszych słów kluczowych
-        best_keywords = [keyword for keyword,
-                         _ in keyword_similarities[:max_keywords]]
+        best_keywords = [(keyword, similarity) for keyword,
+                         similarity in keyword_similarities[:max_keywords] if similarity > 0.15] # similarity more then 15%
         return best_keywords
