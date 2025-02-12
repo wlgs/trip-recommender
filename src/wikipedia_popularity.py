@@ -1,11 +1,30 @@
 import requests
 from collections import defaultdict
+import time
 
 def get_wikipedia_pageviews(lang, page_name, start_date, end_date):
     """Fetch monthly Wikipedia pageviews for a specific article."""
     url = f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{lang}.wikipedia.org/all-access/user/{page_name}/monthly/{start_date}/{end_date}"
+    headers = {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Connection": "keep-alive",
+        "Host": "wikimedia.org",
+        "Priority": "u=0, i",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "TE": "trailers",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+    }
     try:
-        response = requests.get(url)
+        print(f"send to wikimedia {page_name}")
+        response = requests.get(url, headers=headers)
+        print(response.status_code)
+        print(response.text)    
         response.raise_for_status()
         data = response.json()
         total_views = sum(item['views'] for item in data['items'])
@@ -18,6 +37,7 @@ def rank_pois_by_popularity(pois, start_date, end_date):
     """Rank POIs by popularity using Wikipedia views or number of tags."""
     ranked_pois = []
     for poi in pois:
+        time.sleep(0.5)
         tags = poi.get("tags", {})
         popularity_score = 0
 
@@ -43,9 +63,18 @@ def rank_pois_by_popularity(pois, start_date, end_date):
     return [poi for _, poi in ranked_pois]
 
 # Example usage
-pois = api.fetch_pois(query)  # Assume this fetches the POIs
-start_date = "20231201"
-end_date = "20231231"
-ranked_pois = rank_pois_by_popularity(pois, start_date, end_date)
+# pois = api.fetch_pois(query)  # Assume this fetches the POIs
+# start_date = "20231201"
+# end_date = "20231231"
+# ranked_pois = rank_pois_by_popularity(pois, start_date, end_date)
 
-print(f"Top POIs ranked by popularity: {len(ranked_pois)}")
+# print(f"Top POIs ranked by popularity: {len(ranked_pois)}")
+
+
+
+###  co trzeba zrobc
+
+# 1. porownanie chat, dokument, social media,
+# 2. pliki z listą poi 
+# 3. opis algorytmów 
+# 4. analiza redukcji poi po selekcji
